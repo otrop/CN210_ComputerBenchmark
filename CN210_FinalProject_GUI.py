@@ -2,6 +2,14 @@ from tkinter import *
 import tkinter as tk
 import subprocess
 
+cpu_score = 0
+cpu_runtime = 0
+memory_score = 0
+memory_runtime = 0
+disk_score = 0
+disk_runtime = 0
+total_score = 0
+
 window = tk.Tk()
 window.geometry('900x500')
 window.resizable(0,0)
@@ -27,12 +35,12 @@ button2.grid(column=2, row=0)
 button3 = tk.Button(frame,width=30, height=7 , text=f"DISK")
 button3.grid(column=3, row=0)
 
-box1 = tk.Label(master=window, text=f"CPU Score: ").pack(pady=5)
-box11 = tk.Label(master=window, text=f"CPU Runtime: ").pack(pady=5)
-box2 = tk.Label(master=window, text=f"\nMemory Score: ").pack(pady=5)
-box22 = tk.Label(master=window, text=f"Memory Runtime: ").pack(pady=5)
-box3 = tk.Label(master=window, text=f"\nDisk Score: ").pack(pady=5)
-box33 = tk.Label(master=window, text=f"Disk Runtime: ").pack(pady=5)
-box4 = tk.Label(master=window, text=f"\nTotal Score: ").pack(pady=5)
+box1 = tk.Label(master=window, text=f"CPU Score: {cpu_score}.").pack(pady=5)
+box11 = tk.Label(master=window, text=f"CPU Runtime: {cpu_runtime}s.").pack(pady=5)
+box2 = tk.Label(master=window, text=f"\nMemory Score: {memory_score}.").pack(pady=5)
+box22 = tk.Label(master=window, text=f"Memory Runtime: {memory_runtime}s.").pack(pady=5)
+box3 = tk.Label(master=window, text=f"\nDisk Score: {disk_score}.").pack(pady=5)
+box33 = tk.Label(master=window, text=f"Disk Runtime: {disk_runtime}s.").pack(pady=5)
+box4 = tk.Label(master=window, text=f"\nTotal Score: {total_score}").pack(pady=5)
 
 window.mainloop()
